@@ -1,14 +1,70 @@
 # Contributing
 
+### Development guidline
+
+For consistency better structure and maintainability we will follow these simple rules of project architecture:
+
+- Each business entity should have it's own module.
+- Each module should be included in a directory with the entity name.
+- Each directory can contain a **pages/components** directory in case the module will contain page views.
+- The components directory should contain only reusable components that are designed to be used across this module.
+- The **pages** directory will have it's own subdirectories that can be modules themselves in order to lazy load them.
+- All reusable **components/directives/pipes** should be added to the shared module.
+- Each feature module should import the shared.module.
+- Services should be defined in each entity directory and use for root instead of providing it in the module. Avoid this when you need to have multiple instances on a service, in that case it should be provided on a module/component level.
+
+Example structure:
+
+/auth
+  - auth-routing.module.ts
+  - auth.module.ts
+  - auth.service.ts
+  - /components
+    - special-login-button.component.ts
+    - index.ts // should import and export all components
+  - /pages
+    - /login
+      - login.service.ts
+      - login.module.ts
+      - login.component.ts
+      - login.component.html
+    - /register
+      - /pages
+          - /register-user
+          - /register-company
+
+/shared
+  - /components
+    - index.ts
+    - button.component.ts
+  - /directives
+  - /pipes
+  - shared.module.ts
+
+
+## Workflow
+
+- Create your branch Type / Task number - Task description (Ex: **git checkout -b feature/W&D100-add-user-description**)
+
+- Commit and push to the remote branch **git push** (also set upstream branch for newly created ones)
+
+## Pull Request
+
+- Before creating a pull request be sure the coding guidelines and commit message structure has been respected
+
+- Rebase your changes onto the latest version of the master branch
+
+- Submit the pull request to your other colleagues / mentors (they should be added as reviewers)
+
 ## Coding rules
 
 ### To ensure consistency throughout the source code, keep these rules in mind as you are working:
 
-  - We follow the angular style guide so make sure you are up to date on that: https://angular.io/guide/styleguide
+- We follow the angular style guide so check that out: https://angular.io/guide/styleguide
 
 <br>
 
-# Commit Message Guidelines
+## Commit Message Guidelines
 We have very precise rules over how our git commit messages can be formatted. This leads to more readable messages that are easy to follow when looking through the project history.
 
 ### Commit mesage structure:
