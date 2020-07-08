@@ -1,0 +1,16 @@
+[
+  {
+    "context": [
+      "/api"
+    ],
+    "target": {
+      "host": "our.backend.ro",
+      "protocol": "http:",
+      "port": 4200
+    },
+    "secure": false,
+    "pathRewrite": {
+      "^/api": "/"
+    }
+  }
+]

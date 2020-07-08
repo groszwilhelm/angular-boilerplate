@@ -1,0 +1,15 @@
+{
+  "name": "webtech-and-dragons-server",
+  "version": "1.0.0",
+  "description": "Simple node app that serves the client in production environment",
+  "main": "index.js",
+  "scripts": {
+    "start": "node .",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.16.4",
+    "http-proxy-middleware": "^1.0.4"
+  }
+}
