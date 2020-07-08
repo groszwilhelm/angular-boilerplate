@@ -13,6 +13,6 @@
 - Run the production build: **npm run build:prod**
 - Start the production server to serve the static files: **npm run serve:prod**
 
-TODO: Would be great after we test it oun a production server to addpat the deployment and only deploy the server script and dist directory 😁
+TODO: Would be great after we test it on a production server to addapt the deployment and only deploy the server script and dist directory 😁
 
 In case of 🔥🔥🔥 contact: webtech&dragons team 😁
