@@ -1,4 +1,4 @@
-# WebtechAndDragons Client
+# Webtech & Dragons Client
 
 ### Run the projct
 
