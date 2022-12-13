@@ -9,7 +9,7 @@
   },
   "license": "ISC",
   "dependencies": {
-    "express": "^4.16.4",
+    "express": "^4.17.3",
     "http-proxy-middleware": "^1.0.4"
   }
 }
